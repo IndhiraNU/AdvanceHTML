@@ -1,48 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration Form</title>
-    <style>
-        form {
-            margin: 0 auto;
-            width: 300px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: pink;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, pink, blue, violet);
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .login-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         text-align: center;
+    }
+    .login-container label {
+        display: block;
+        text-align: left;
+        float : left;
+        margin-bottom: 5px;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .login-container input[type="submit"] {
+        background: linear-gradient(to right, blue, violet);
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+      
+    }
+    .login-container input[type="submit"]:hover {
+        background: linear-gradient(to right, violet, blue);
+    }
+    .input-icon input[type="text"] {
+    background-image: url('https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png'); /* Replace 'path_to_your_icon.svg' with the path to your SVG icon */
+}
+
+.input-icon input[type="password"] {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/5582/5582931.png'); /* Replace 'path_to_your_icon.svg' with the path to your SVG icon */
+}
+    .forgot-password {
+        color: #3f51b5;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    .signup-text {
+        color: #3f51b5;
+        margin-top: 20px;
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+    .social-icons a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #3f51b5;
+    }
+    .signup-link {
+        color: #3f51b5;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-    <form action="#" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
-        <label for="phone">Phone Number:</label><br>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required title="Please enter 10-digit phone number"><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-        <input type="submit" value="Submit">
+<div class="login-container">
+    <h2>Login</h2>
+    <form>
+<form>
+    <label for="username" style="display: inline-block; text-align: left;">Username</label>
+    <input type="text" id="username" name="username" placeholder="Type your username" required><br>
+    <label for="password" style="display: inline-block; text-align: left;">Password</label>
+    <input type="password" id="password" name="password" placeholder="Type your password" required><br>
+    <a href="#" class="forgot-password">Forgot password?</a><br>
+    <input type="submit" value="Login">
+</form>
+
+
     </form>
+    <p class="signup-text">or signup using</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter"></a>
+        <a href="https://mail.google.com"><img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail"></a>
+    </div><br><br><br><br><br>
+    <p class="signup-text">or signup using</p>
+    <p class="signup-link" onclick="window.location.href='YOUR_SIGNUP_URL_HERE'">Signup</p>
+</div>
 </body>
 </html>
