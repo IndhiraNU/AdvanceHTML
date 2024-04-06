@@ -10,10 +10,29 @@
         background: linear-gradient(to right, pink, blue, violet);
         margin: 0;
         padding: 0;
-        height: 100vh;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+    }
+    header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        display: none;
+    }
+    header nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    header nav ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+    header nav ul li a {
+        text-decoration: none;
+        color: white;
     }
   
     .login-container {
@@ -22,6 +41,7 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         text-align: center;
+        margin: auto;
     }
     .login-container label {
         display: block;
@@ -88,12 +108,20 @@
     .success-message {
         display: none;
     }
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: none;
+    }
 </style>
 </head>
 <body>
-<header id="header" style="display:none; margin-top: -389px;">
-    <!-- Your header content goes here -->
-    <h1>Welcome to My Website</h1>
+
+<header id="header">
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -101,9 +129,7 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-     <div class="success-message" id="success-message">
-        <h2>You have successfully logged in</h2>
-    </div>
+    <h1>Welcome to My Website</h1>
 </header>
 
 <div class="login-container" id="login-container">
@@ -127,10 +153,9 @@
     <p class="signup-link" onclick="window.location.href='YOUR_SIGNUP_URL_HERE'">Signup</p>
 </div>
 
-<footer id="footer" style="display:none; align-items: left">
-    <!-- Your footer content goes here -->
-    <p>&copy; 2024 My Website. All rights reserved.</p>
-</footer>
+<div class="success-message" id="success-message">
+    <h2>You have successfully logged in</h2>
+</div>
 
 <script>
     document.getElementById("login-form").addEventListener("submit", function(event) {
@@ -149,6 +174,10 @@
         document.getElementById("footer").style.display = "block"; // Show footer
     });
 </script>
+
+<footer id="footer">
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
