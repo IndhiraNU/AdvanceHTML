@@ -19,7 +19,10 @@
         background-color: #333;
         color: white;
         padding: 10px;
-        display: none;
+        display: none; /* Initially hide header */
+        position: fixed;
+        top: 0;
+        width: 100%;
     }
     header nav ul {
         list-style-type: none;
@@ -42,6 +45,7 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         text-align: center;
         margin: auto;
+        margin-top: 50px;
     }
     .login-container label {
         display: block;
@@ -76,12 +80,12 @@
         background: linear-gradient(to right, violet, blue);
     }
     .input-icon input[type="text"] {
-    background-image: url('https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png');
-}
+        background-image: url('https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png');
+    }
 
-.input-icon input[type="password"] {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/5582/5582931.png');
-}
+    .input-icon input[type="password"] {
+        background-image: url('https://cdn-icons-png.flaticon.com/512/5582/5582931.png');
+    }
     .forgot-password {
         color: #3f51b5;
         text-decoration: none;
@@ -107,28 +111,30 @@
     }
     .success-message {
         display: none;
+        margin-top: 20px;
     }
     footer {
         background-color: #333;
         color: white;
         padding: 10px;
-        position: absolute;
+        display: none; /* Initially hide footer */
+        position: fixed;
         bottom: 0;
         width: 100%;
-        display: none;
+    }
+    /* New CSS */
+    #nav-box {
+        background-color: #ddd;
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+        display: none; /* Initially hide nav box */
     }
 </style>
 </head>
 <body>
 
 <header id="header">
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
     <h1>Welcome to My Website</h1>
 </header>
 
@@ -157,6 +163,15 @@
     <h2>You have successfully logged in</h2>
 </div>
 
+
+<div id="nav-box">
+    <p>NavBar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Home   Features   Services   Our Work</p>
+</div>
+
+<footer id="footer">
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
+
 <script>
     document.getElementById("login-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the form from submitting
@@ -172,12 +187,9 @@
         document.getElementById("success-message").style.display = "block";
         document.getElementById("header").style.display = "block"; // Show header
         document.getElementById("footer").style.display = "block"; // Show footer
+        document.getElementById("nav-box").style.display = "block"; // Show navigation box
     });
 </script>
-
-<footer id="footer">
-    <p>&copy; 2024 My Website. All rights reserved.</p>
-</footer>
 
 </body>
 </html>
