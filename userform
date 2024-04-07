@@ -86,6 +86,15 @@
     .input-icon input[type="password"] {
         background-image: url('https://cdn-icons-png.flaticon.com/512/5582/5582931.png');
     }
+    #nav-box {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    display: none; /* Initially hide nav box */
+    border: 10px solid white; /* Add white border */
+}
+
     .forgot-password {
         color: #3f51b5;
         text-decoration: none;
