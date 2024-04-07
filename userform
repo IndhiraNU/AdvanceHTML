@@ -132,16 +132,21 @@
         width: 100%;
     }
     /* New CSS */
+
+
 #nav-box {
     background-color: #ddd;
     padding: 3px; /* Further reduced padding */
-    text-align: left; /* Align text to the left */
-    margin-top: 10px; /* Adjusted margin top */
-    display: none; /* Initially hide nav box */
-    border: 3px solid white; /* Further reduced border */
+    text-align: center;
+    margin-top: 40px; /* Adjusted margin top for more space */
+    margin-bottom: 20px; /* Adjusted margin bottom */
+    display: none;
+    border: none;
+    height: 30px;
+    line-height: 10px; /* Center text vertically */
 }
 
-   
+
 </style>
 </head>
 <body>
