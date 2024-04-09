@@ -87,22 +87,40 @@
         background-image: url('https://cdn-icons-png.flaticon.com/512/5582/5582931.png');
     }
     #nav-box {
-        background-color: #ddd;
-        padding: 3px; /* Further reduced padding */
-        text-align: center;
-        margin-top: 20px; /* Adjusted margin top for more space */
-        margin-bottom: 20px; /* Adjusted margin bottom */
+    background-color: #ddd;
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+    display: none; /* Initially hide nav box */
+    border: 5px solid white; /* Add white border */
+}
+
+    .forgot-password {
+        color: #3f51b5;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    .signup-text {
+        color: #3f51b5;
+        margin-top: 20px;
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+    .social-icons a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #3f51b5;
+    }
+    .signup-link {
+        color: #3f51b5;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .success-message {
         display: none;
-        border: none;
-        height: 30px;
-        line-height: 10px; /* Center text vertically */
-    }
-    .container {
-        text-align: center; /* Center aligns the content */
-        margin-top: 50px; /* Adjust as needed */
-    }
-    .next-button {
-        margin-top: 20px; /* Add margin to separate from nav-box */
+        margin-top: 20px;
     }
     footer {
         background-color: #333;
@@ -113,7 +131,31 @@
         bottom: 0;
         width: 100%;
     }
-
+    /* New CSS */
+#nav-box {
+    background-color: #ddd;
+    padding: 3px; /* Further reduced padding */
+    text-align: center;
+    margin-top: 40px; /* Adjusted margin top for more space */
+    margin-bottom: 20px; /* Adjusted margin bottom */
+    display: none;
+    border: none;
+    height: 30px;
+    line-height: 0px; /* Center text vertically */
+}
+.next-button {
+        background: linear-gradient(to right, blue, violet);
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
 </style>
 </head>
 <body>
@@ -143,16 +185,37 @@
     <p class="signup-link" onclick="window.location.href='YOUR_SIGNUP_URL_HERE'">Signup</p>
 </div>
 
+<div class="success-message" id="success-message">
+    <h2>You have successfully logged in</h2>
+</div>
+
 <div id="nav-box">
     <p>NavBar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Home&nbsp;&nbsp;Features&nbsp;&nbsp;Services&nbsp;&nbsp;Our Work</p>
 </div>
 
-<div class="container">
-   <h2 id="success-message" class="success-message">You have successfully logged in</h2>
-  
-  <!-- Place your button code here -->
-  <button class="next-button" onclick="window.location.href='NEXT_PAGE_URL_HERE'">Next</button>
+<!-- Next page code starts here -->
+<div id="next-page" style="display: none;">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr>
+                <td>Jane Doe</td>
+                <td>jane@example.com</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
+<button class="next-button" onclick="showNextPage()">Next</button>
+<!-- Next page code ends here -->
 
 <footer id="footer">
     <p>&copy; 2024 My Website. All rights reserved.</p>
@@ -175,6 +238,14 @@
         document.getElementById("footer").style.display = "block"; // Show footer
         document.getElementById("nav-box").style.display = "block"; // Show navigation box
     });
+
+    function showNextPage() {
+        // Hide login success message and show next page content
+        document.getElementById("success-message").style.display = "none";
+        document.getElementById("next-page").style.display = "block";
+        // Hide the Next button after displaying the table
+        document.getElementsByClassName("next-button")[0].style.display = "none";
+    }
 </script>
 
 </body>
