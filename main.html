@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body {
+        background: linear-gradient(to right, pink, blue, violet);
+        margin: 0;
+        padding: 0;
+    }
+    .login-container {
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: auto;
+        margin-top: 5px;
+	width: 80%; 
+ 	max-width: 400px
+    }
+    .login-container label {
+        display: block;
+        text-align: left;
+        float: left;
+        margin-bottom: 3px;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .login-container input[type="submit"] {
+        background: linear-gradient(to right, blue, violet);
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .login-container input[type="submit"]:hover {
+        background: linear-gradient(to right, violet, blue);
+    }
+    .forgot-password {
+        color: #3f51b5;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    .signup-text {
+        color: #3f51b5;
+        margin-top: 20px;
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+    .social-icons a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #3f51b5;
+    }
+    .signup-link {
+        color: #3f51b5;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .success-message {
+        display: none;
+        margin-top: 20px;
+    }
+    #nav-box {
+        background-color: #ddd;
+        padding: 3px;
+        text-align: center;
+        margin-top: 40px;
+        display: none;
+        border: 3px solid white;
+        height: 30px;
+        line-height: 10px;
+    }
+    .next-button {
+        background: linear-gradient(to right, blue, violet);
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    #next-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+</head>
+<body>
+
+<header id="header" style="background-color: #333; color: white;  z-index: 1000; padding: 10px; display: none; position: fixed; top: 0; width: 100%;">
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+    </div>
+</header>
+
+<div class="container login-container" id="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="username" style="display: inline-block; text-align: left;">Username</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Type your username" required><br>
+        <label for="password" style="display: inline-block; text-align: left;">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Type your password" required><br>
+        <a href="#" class="forgot-password">Forgot password?</a><br>
+        <input type="submit" value="Login" class="btn btn-primary">
+    </form>
+   
+    <p class="signup-text">or signup using</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter"></a>
+        <a href="https://mail.google.com"><img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail"></a>
+    </div><br><br><br><br><br>
+    <p class="signup-text">or signup using</p>
+    <p class="signup-link" onclick="window.location.href='YOUR_SIGNUP_URL_HERE'">Signup</p>
+</div>
+
+<div class="container success-message" id="success-message" style="display: none; margin-top: 20px;">
+    <h2>You have successfully logged in</h2>
+</div>
+
+<div id="nav-box" class="container" style="display: none;">
+    <p>NavBar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Home&nbsp;&nbsp;Features&nbsp;&nbsp;Services&nbsp;&nbsp;Our Work</p>
+</div>
+
+<div id="next-page" class="container" style="display: none;">
+    <button class="next-button" onclick="window.open('table.html')">Next</button>
+</div>
+
+<footer id="footer" style="background-color: #333; color: white; padding: 10px; display: none; position: fixed; bottom: 0; width: 100%;">
+    <div class="container">
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+        // Here, you would typically validate the username and password
+        // For the sake of simplicity, let's assume the login is successful
+        // You can replace this with your actual login validation
+        
+        // Show the success message and hide the login form
+        document.getElementById("login-container").style.display = "none";
+        document.getElementById("success-message").style.display = "block";
+        document.getElementById("header").style.display = "block"; // Show header
+        document.getElementById("footer").style.display = "block"; // Show footer
+        document.getElementById("nav-box").style.display = "block"; // Show navigation box
+        document.getElementById("next-page").style.display = "block"; // Show next page content
+    });
+</script>
+
+</body>
+</html>

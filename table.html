@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body {
+        background: linear-gradient(to right, pink, violet);
+        margin: 0;
+        padding: 0;
+    }
+    table {
+        border-collapse: collapse;
+padding: 8px;
+height: 30px;
+ margin-top: 40px;
+        width: 80%;
+        margin: 80px auto 20px; /* Adjusted margin to push table below header */
+    }
+    th, td {
+        padding: 8px;
+        border: 1px solid black;
+        text-align: center;
+
+        background-color: white; /* Set background color to white */
+        color: black; /* Set text color to black */
+
+    }
+    .header {
+        z-index: 1000;
+	position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+ /* Ensure header appears above other elements */
+    }
+</style>
+</head>
+<body>
+
+<header id="header" style="background-color: #333; color: white;  z-index: 1000; padding: 10px; display: block; position: fixed; top: 0; width: 100%;">
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+    </div>
+</header>
+
+<div> <!-- Removed style attribute and margin-top -->
+    <table>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td>25</td>
+      </tr>
+    </table>
+</div>
+
+<footer id="footer" style="background-color: #333; color: white; padding: 10px; display: block; position: fixed; bottom: 0; width: 100%;">
+    <div class="container">
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
