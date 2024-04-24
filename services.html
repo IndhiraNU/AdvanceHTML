@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services</title>
+<style>
+body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, pink, blue, violet);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+    }
+    header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        display: none; /* Initially hide header */
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    header nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    header nav ul li {
+        display: inline;
+        margin-right: 5px;
+    }
+    header nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+  
+    .login-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .login-container label {
+        display: block;
+        text-align: left;
+        float : left;
+        margin-bottom: 5px;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .login-container input[type="submit"] {
+        background: linear-gradient(to right, blue, violet);
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .login-container input[type="submit"]:hover {
+        background: linear-gradient(to right, violet, blue);
+    }
+    .input-icon input[type="text"] {
+        background-image: url('https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png');
+    }
+
+    .input-icon input[type="password"] {
+        background-image: url('https://cdn-icons-png.flaticon.com/512/5582/5582931.png');
+    }
+    #nav-box {
+    background-color: #ddd;
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+    display: none; /* Initially hide nav box */
+    border: 5px solid white; /* Add white border */
+}
+
+    .forgot-password {
+        color: #3f51b5;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    .signup-text {
+        color: #3f51b5;
+        margin-top: 20px;
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+    .social-icons a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #3f51b5;
+    }
+    .signup-link {
+        color: #3f51b5;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .success-message {
+        display: none;
+        margin-top: 20px;
+    }
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        display: none; /* Initially hide footer */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+#nav-box {
+    background-color: #ddd;
+    padding: 3px; /* Further reduced padding */
+    text-align: center;
+    margin-top: 40px; /* Adjusted margin top for more space */
+    margin-bottom: 20px; /* Adjusted margin bottom */
+    display: none;
+    border: none;
+    height: 30px;
+    line-height: 0px; /* Center text vertically */
+}
+.next-button {
+        background: linear-gradient(to right, blue, violet);
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    #next-page {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+table {
+    border-collapse: collapse; /* Remove default spacing between table cells */
+}
+
+th, td {
+    padding: 8px; /* Add padding to table cells */
+    border: 1px solid black; /* Add border to table cells */
+    text-align: center; /* Center text within table cells */
+}
+
+    
+
+
+</style>
+</head>
+<body>
+<header id="header">
+    <h1>Welcome to My Website</h1>
+</header>
+<div class="login-container" id="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="username" style="display: inline-block; text-align: left;">Username</label>
+        <input type="text" id="username" name="username" placeholder="Type your username" required><br>
+        <label for="password" style="display: inline-block; text-align: left;">Password</label>
+        <input type="password" id="password" name="password" placeholder="Type your password" required><br>
+        <a href="#" class="forgot-password">Forgot password?</a><br>
+        <input type="submit" value="Login">
+    </form>
+   
+    <p class="signup-text">or signup using</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
+        <a href="https://twitter.com"><img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter"></a>
+        <a href="https://mail.google.com"><img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail"></a>
+    </div><br><br><br><br><br>
+    <p class="signup-text">or signup using</p>
+    <p class="signup-link" onclick="window.location.href='YOUR_SIGNUP_URL_HERE'">Signup</p>
+</div>
+
+<div class="success-message" id="success-message">
+    <h2>You have successfully logged in</h2>
+</div>
+
+<div id="nav-box">
+    <p>NavBar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Home&nbsp;&nbsp;Features&nbsp;&nbsp;Services&nbsp;&nbsp;Our Work</p>
+</div>
+
+<!-- Next page code starts here -->
+<div id="next-page" style="display: none;">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Indhu</td>
+                <td>indhu@example.com</td>
+            </tr>
+            <tr>
+                <td>Mukunda</td>
+                <td>Mukunda@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<button class="next-button" onclick="showNextPage()">Next</button>
+<!-- Next page code ends here -->
+
+<footer id="footer">
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+        // Here, you would typically validate the username and password
+        // For the sake of simplicity, let's assume the login is successful
+        // You can replace this with your actual login validation
+        
+        // Show the success message and hide the login form
+        document.getElementById("login-container").style.display = "none";
+        document.getElementById("success-message").style.display = "block";
+        document.getElementById("header").style.display = "block"; // Show header
+        document.getElementById("footer").style.display = "block"; // Show footer
+        document.getElementById("nav-box").style.display = "block"; // Show navigation box
+    });
+
+    function showNextPage() {
+        // Hide login success message and show next page content
+        document.getElementById("success-message").style.display = "none";
+        document.getElementById("next-page").style.display = "block";
+        // Hide the Next button after displaying the table
+        document.getElementsByClassName("next-button")[0].style.display = "none";
+    }
+</script>
+
+
+</body>
+</html>
