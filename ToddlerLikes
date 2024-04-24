@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<html>
+<head>
+  <title>Things Babies Love</title>
+  <style>
+    /* unvisited link */
+    h2:link {
+      color: red;
+    }
+    /* visited link */
+    h2:visited {
+      color: green;
+    }
+    /* mouse over link */
+    h2:hover {
+      color: hotpink;
+    }
+    /* selected link */
+    h2:active {
+      color: green;
+    }
+    body {
+      background-color: lightblue;
+      font-family: verdana;
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1512389055488-8d82cb26ba6c?q=80&w=1883&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+    h1 {
+      color: white;
+      text-align: center;
+      border: 5px outset grey;
+      border-radius: 5px;
+      margin: 50px auto;
+      max-width: 500px;
+      padding: 10px;
+      text-shadow: 2px 2px 5px red;
+      text-decoration: underline wavy yellow;
+      text-transform: capitalize;
+      background: blue;
+    }
+    h1:hover {
+      background-color: pink;
+    }
+    h2 {
+      background-color: lightyellow;
+      color: blue;
+      margin: 0 auto 20px;
+      max-width: 500px;
+      padding: 10px;
+      position: relative;
+      text-align: center;
+box-shadow: 10px 10px;
+    }
+    h2::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(100%, -100%);
+    }
+    ul {
+      list-style-type: square;
+      max-width: 300px;
+      margin: 0 auto;
+      padding-left: 20px;
+    }
+    p {
+      padding: 25px;
+      text-align: justify;
+      letter-spacing: 1px;
+ text-shadow: 1px 1px;
+    }
+ p::first-letter {
+      color: yellow;
+      font-size: 200%;
+    }
+    h3 {
+      outline: 5px solid black;
+      padding: 10px;
+      max-width: 300px;
+      margin: 0 auto 20px;
+    }
+    img.tree {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1; /* Ensure the tree image is above the background */
+      max-width: 150px; /* Adjust the size of the tree image */
+
+
+    }
+img.tree {
+  opacity: 0.5;
+}
+
+img.tree:hover {
+  opacity: 1.0;
+}
+
+img.baby-left {
+      position: absolute;
+      top: 20px;
+      left: 50px;
+
+      z-index: 1; /* Ensure the baby image is above the background */
+      max-width: 150px; /* Adjust the size of the baby image */
+ border-radius: 50%;
+ 
+-webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+
+    }
+/* Define the keyframes for the animation */
+@keyframes babyAnimation {
+  0% {
+    transform: translate(0, 0); /* Initial position */
+  }
+  25% {
+    transform: translate(0, 50px); /* Move down */
+  }
+  50% {
+    transform: translate(-50px, 50px); /* Move left */
+  }
+  75% {
+    transform: translate(-50px, 0); /* Move up */
+  }
+  100% {
+    transform: translate(0, 0); /* Back to initial position */
+  }
+}
+
+/* Apply the animation to the baby image */
+img.baby-left {
+  animation: babyAnimation 4s ease-in-out infinite; /* Play the animation infinitely */
+}
+
+
+h3 {
+  outline: 5px solid black;
+  padding: 10px;
+  max-width: 300px;
+  margin: 0 auto 20px;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.5s ease; /* Add transition for the transform property */
+}
+
+h3:hover {
+  transform: perspective(1000px) rotateY(50deg);
+}
+/* Define the keyframes for the animation */
+@keyframes treeAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the animation to the tree image */
+img.tree {
+  animation: treeAnimation 2s infinite alternate; /* Play the animation infinitely */
+}
+
+
+ 
+  </style>
+</head>
+<body>
+  <!-- Your HTML content here -->
+  <h1>Hello, Welcome to my page</h1>
+  <h2>Please Subscribe for more</h2>
+  <ul>
+    <h3>Let's See The Things Babies Love the Most</h3>
+    <li>Babies delight in babies.</li>
+    <li>Baby-friendly toys</li>
+    <li>Engaging with them</li>
+  </ul>
+  <!-- Added more content to demonstrate scrolling -->
+  <p>Music and Lullabies: Soft, soothing music or gentle lullabies can help calm babies and even aid in their development.</p>
+  <p>Bright Colors and Patterns: Babies are drawn to bright colors and high-contrast patterns. Toys, books, and mobiles with bold colors and simple patterns can capture their attention.</p>
+  <p>Textures: Babies love to explore different textures with their hands and mouths. Soft fabrics, crinkly toys, and textured books are often favorites.</p>
+  <p>Faces: Babies are naturally drawn to faces, especially those of their caregivers. They enjoy looking at faces, making eye contact, and mimicking facial expressions.</p>
+  <p>Movement: Whether it's being rocked in a caregiver's arms, swayed gently in a baby swing, or bounced on a caregiver's knee, babies often enjoy rhythmic movement.</p>
+  <p>Peek-a-boo: The classic game of peek-a-boo never seems to get old for babies. They love the surprise element and the interaction with their caregiver.</p>
+  <p>Sensory Toys: Toys that make sounds, light up, or have different textures can provide endless entertainment for babies as they explore and learn.</p>
+  <p>Nature Sounds: Babies often find the sounds of nature, such as birds chirping or gentle rain, soothing and comforting.</p>
+  <p>Interaction: Above all, babies love interaction with their caregivers. Talking, singing, cuddling, and playing together are some of the most enjoyable activities for babies.</p>
+  <p>Mirror Play: Babies are fascinated by their own reflections. Mirrors can provide hours of entertainment as they make funny faces and interact with their own images.</p>
+  <!-- Additional tree image on the top right -->
+  <img class="tree" src="https://clipground.com/images/img_tree-png-1.png" alt="Tree Image">
+  <!-- Image of a baby on the left side -->
+  <img class="baby-left" src="https://e7.pngegg.com/pngimages/380/736/png-clipart-cartoon-sport-sport-kids-child-text-thumbnail.png" alt="Baby Image">
+
+
+</body>
+</html>
+
