@@ -1,182 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Form</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<style>
-    body {
-        background: linear-gradient(to right, pink, blue, violet);
-        margin: 0;
-        padding: 0;
-    }
-    .login-container {
-        background-color: white;
-        padding: 5px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        margin: auto;
-        margin-top: 5px;
-	width: 80%; 
- 	max-width: 400px
-    }
-    .login-container label {
-        display: block;
-        text-align: left;
-        float: left;
-        margin-bottom: 3px;
-    }
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
-        width: 100%;
-        padding: 10px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    .login-container input[type="submit"] {
-        background: linear-gradient(to right, blue, violet);
-        border: none;
-        color: white;
-        padding: 10px 30px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    .login-container input[type="submit"]:hover {
-        background: linear-gradient(to right, violet, blue);
-    }
-    .forgot-password {
-        color: #3f51b5;
-        text-decoration: none;
-        margin-top: 10px;
-        display: inline-block;
-    }
-    .signup-text {
-        color: #3f51b5;
-        margin-top: 20px;
-    }
-    .social-icons {
-        margin-top: 10px;
-    }
-    .social-icons a {
-        margin: 0 10px;
-        text-decoration: none;
-        color: #3f51b5;
-    }
-    .signup-link {
-        color: #3f51b5;
-        text-decoration: underline;
-        cursor: pointer;
-    }
-    .success-message {
-        display: none;
-        margin-top: 20px;
-    }
-    #nav-box {
-        background-color: #ddd;
-        padding: 3px;
-        text-align: center;
-        margin-top: 40px;
-        display: none;
-        border: 3px solid white;
-        height: 30px;
-        line-height: 10px;
-    }
-    .next-button {
-        background: linear-gradient(to right, blue, violet);
-        border: none;
-        color: white;
-        padding: 10px 30px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    #next-page {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.1">
+    <title>VS Fintech</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https:\\drive.google.com\thumbnail?id=1d9QbIazOjxARAlXFXQvuW2xtBPgD95u_" alt="VS Fintech Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Explore Funds</a></li>
+                    <li><a href="#">Goal Based</a></li>
+                    <li><a href="#">VS Fintech Picks</a></li>
+                    <li><a href="#">Why Us</a></li>
+                    <li><a href="#">Financial Tools</a></li>
+                </ul>
+            </nav>
+            <div class="login">
+                <button>Login</button>
+            </div>
+        </div>
+    </header>
 
-<header id="header" style="background-color: #333; color: white;  z-index: 1000; padding: 10px; display: none; position: fixed; top: 0; width: 100%;">
-    <div class="container">
-        <h1>Welcome to My Website</h1>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Turn Goals into Reality: Reach Financial Milestones with Mutual Funds</h1>
+                <p>Mutual funds are a smart way to grow your money. They can help you achieve your financial goals as they have the potential to generate higher-than-inflation returns.</p>
+                <button>Create Your Own Goal</button>
+            </div>
+            <div class="hero-image">
+                <img src="https:\\drive.google.com\thumbnail?id=1UZVeEXZR2xJANt9oaXyTzpZORL8qwEAc" alt="Investment Growth">
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <img src="https:\\drive.google.com\thumbnail?id=1TyezV8YBDKa2qY0FB3DYzFzFOFac6SzG" alt="VS Fintech Picks">
+                <h3>VS Fintech Picks</h3>
+                <p>Our experts pick funds for you and choose from various categories</p>
+                <a href="#">View Picks &rarr;</a>
+            </div>
+            <div class="feature-card">
+                <img src="https:\\drive.google.com\thumbnail?id=1EJgDeQnUkwJkaei-jMqIWWjXDcyajbAR" alt="Do It Yourself">
+                <h3>Do It Yourself</h3>
+                <p>Create your own customized portfolio from wide range of mutual funds</p>
+                <a href="#">View Picks &rarr;</a>
+            </div>
+            <div class="feature-card">
+                <img src="https:\\drive.google.com\thumbnail?id=1HkeTJkHZpG_CKaF52uMd5csYEu9ZfKh9" alt="">
+                <h3>Goal Based Investing</h3>
+                <p>Identify your goals, build your goal and monitor your goal</p>
+                <a href="#">View Picks &rarr;</a>
+            </div>
+        </section>
+
+        <section class="why-invest">
+            <div style="display: flex; justify-content: space-evenly; flex-direction: row;">
+                
+                <img src="https:\\drive.google.com\thumbnail?id=1FGPXV83oWzfgP1_RYTyYuykMuTPsIxOu"VS Fintech Logo" width="500" height="600">
+
+            
+            <div class="accordion">
+                <h2>Why Invest with VS Fintech</h2>
+                <div class="accordion-item">
+                    <button class="accordion-header">Comprehensive Financial Insights<span class="plus">+</span></button>
+                    <div class="accordion-content">
+                        <p>Sample text for Comprehensive Financial Insights. This section will provide detailed insights into your financial status and help you make informed decisions.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Data Mining and Integration<span class="plus">+</span></button>
+                    <div class="accordion-content">
+                        <p>Sample text for Data Mining and Integration. This section covers how data mining techniques are used to integrate and analyze financial data.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Predictive Analytics<span class="plus">+</span></button>
+                    <div class="accordion-content">
+                        <p>Sample text for Predictive Analytics. Learn how predictive analytics can help forecast financial trends and inform your investment strategy.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Customized Dashboards<span class="plus">+</span></button>
+                    <div class="accordion-content">
+                        <p>Sample text for Customized Dashboards. This section will help you create customized dashboards to track your financial goals and investments.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Market and Sector Analysis<span class="plus">+</span></button>
+                    <div class="accordion-content">
+                        <p>Sample text for Market and Sector Analysis. Gain insights into different markets and sectors to diversify your investment portfolio.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Automation and Machine Learning<span class="plus">+</span></button>
+                    <div class="accordion-content">
+                        <p>Sample text for Automation and Machine Learning. Discover how automation and machine learning technologies can optimize your investments.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Risk Management Solutions<span class="plus">+</span></button>
+                    <div class="accordion-content">
+                        <p>Sample text for Risk Management Solutions. Learn about various risk management strategies to protect your investments.</p>
+                    </div>
+                </div>
+            </div>
+                    </div>
+        </section>
+
+        <div class="container">
+    <div class="card">
+        <div class="card-content">
+            <img src="https://drive.google.com/thumbnail?id=10XyJ2W7bOj73lrzBtlg0IYy3W_ztWIzm" alt="Own a House">
+
+            <h3>Own a House</h3>
+            <p>Start planning finances for your perfect dream home with us</p>
+        </div>
     </div>
-</header>
+    <div class="card">
+        <div class="card-content">
+            <img src="https://drive.google.com/thumbnail?id=1j1FIvgOeizY-n-TpfYhSagfh02Jq0Jh-" alt="Buy a Car">
+            <h3>Buy a Car</h3>
 
-<div class="container login-container" id="login-container">
-    <h2>Login</h2>
-    <form id="login-form">
-        <label for="username" style="display: inline-block; text-align: left;">Username</label>
-        <input type="text" id="username" name="username" class="form-control" placeholder="Type your username" required><br>
-        <label for="password" style="display: inline-block; text-align: left;">Password</label>
-        <input type="password" id="password" name="password" class="form-control" placeholder="Type your password" required><br>
-        <a href="#" class="forgot-password">Forgot password?</a><br>
-        <input type="submit" value="Login" class="btn btn-primary">
-    </form>
-   
-    <p class="signup-text">or signup using</p>
-    <div class="social-icons">
-        <a href="https://www.facebook.com"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
-        <a href="https://twitter.com"><img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter"></a>
-        <a href="https://mail.google.com"><img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail"></a>
-    </div><br><br><br><br><br>
-    <p class="signup-text">or signup using</p>
-    <p class="signup-link" onclick="window.location.href='YOUR_SIGNUP_URL_HERE'">Signup</p>
-</div>
-
-<div class="container success-message" id="success-message" style="display: none; margin-top: 20px;">
-    <h2>You have successfully logged in</h2>
-</div>
-
-<div id="nav-box" class="container" style="display: none;">
-    <p>NavBar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Home&nbsp;&nbsp;Features&nbsp;&nbsp;Services&nbsp;&nbsp;Our Work</p>
-</div>
-
-<div id="next-page" class="container" style="display: none;">
-    <button class="next-button" onclick="window.open('table.html')">Next</button>
-</div>
-
-<footer id="footer" style="background-color: #333; color: white; padding: 10px; display: none; position: fixed; bottom: 0; width: 100%;">
-    <div class="container">
-        <p>&copy; 2024 My Website. All rights reserved.</p>
+            <p>Think twice before buying that car you have in mind? Let us help out</p>
+        </div>
     </div>
-</footer>
+    <div class="card">
+        <div class="card-content">
+            <img src="https://drive.google.com/thumbnail?id=1f5XQS4LcKc9XSa7rH2aBtjyJwmQ53k_J" alt="Kids Education">
 
-<script>
-    document.getElementById("login-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the form from submitting
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        
-        // Here, you would typically validate the username and password
-        // For the sake of simplicity, let's assume the login is successful
-        // You can replace this with your actual login validation
-        
-        // Show the success message and hide the login form
-        document.getElementById("login-container").style.display = "none";
-        document.getElementById("success-message").style.display = "block";
-        document.getElementById("header").style.display = "block"; // Show header
-        document.getElementById("footer").style.display = "block"; // Show footer
-        document.getElementById("nav-box").style.display = "block"; // Show navigation box
-        document.getElementById("next-page").style.display = "block"; // Show next page content
-    });
-</script>
+            <h3>Kids Education</h3>
+            <p>What will you give to have your little one’s tiny dreams come true</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <img src="https://drive.google.com/thumbnail?id=1txcnIQl9ra0ayToPC_gean3c9bY_4mJs" alt="Easy Retirement">
+            <h3>Easy Retirement</h3>
 
+            <p>Start your second inning with style. Plan your retirement adequately with us.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <img src="https://drive.google.com/thumbnail?id=1rnXlgNcnRlmBTGsSehP1EV4VZOb70koR" alt="Plan a Vacation">
+            <h3>Plan a Vacation</h3>
+
+            <p>Travel beckons? Don’t let finances hold you back!</p>
+        </div>
+    </div>
+</div>
+       <section class="sip-calculator">
+            <h2>SIP Calculator</h2>
+            <div class="calculator-container">
+                <form id="sip-form" class="calculator-form">
+                    <label for="monthly-investment">Monthly Investment (₹):</label>
+                    <input type="number" id="monthly-investment" name="monthly-investment" value="5000">
+                    
+                    <label for="investment-period">Investment Period (Years):</label>
+                    <input type="number" id="investment-period" name="investment-period" value="15">
+                    
+                    <label for="expected-return">Expected Return Rate (%):</label>
+                    <input type="number" id="expected-return" name="expected-return" value="12.5">
+                    
+                    <button type="button" onclick="calculateSIP()">Calculate</button>
+                </form>
+                <div class="result chart-container">
+                    <canvas id="sip-chart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div style="display: flex; justify-content: space-evenly; flex-direction: row;">
+            
+               <p> Explore Funds</p>
+                <p>Goal Based</p>
+                <p>VS Fintech Picks</p>
+                <p>Why Us<p>
+                <p>Financial Tools</p>
+        
+        </div>
+        <div class="footer-container">
+            <div class="footer-section address">
+                <h3>Corporate Office Address</h3>
+                <p>#15-13-8/8, No. 502, Gayatri Apts.,<br>
+                   Krishnanagar, Maharanipeta,<br>
+                   Visakhapatnam, 530002.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>We're Just a Call Away</h3>
+                <p>+91 7207123400, +918179593300</p>
+                <p>Email: <a href="mailto:vsfintech@gmail.com">vsfintech@gmail.com</a></p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow us @</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="https://drive.google.com/thumbnail?id=1iEDXsUpBfBmNTr_o37c_0-xyjkGpdNjb" alt="Facebook"></a>
+
+                    <a href="#"><img src="https://drive.google.com/thumbnail?id=1SpAlkuzEMwax8zLSlaclf8zAGP0CUIN4" alt="Instagram"></a>
+
+                    <a href="#"><img src="https://drive.google.com/thumbnail?id=1XMP1TwvfZsCBGFMiv4GoIMNvpzTBe27-" alt="Linkedin"></a>
+
+                    <a href="#"><img src="https://drive.google.com/thumbnail?id=1fFo0sP-oB7cYVqWshJFdWvnRCYcj1MIK" alt="Twitter"></a>
+
+                    <a href="#"><img src="https://drive.google.com/thumbnail?id=1gnu8_a5OmdOyXByTDTw2WtbRRY63qega" alt="YouTube"></a>
+
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="footer-section disclaimer">
+            <h3>Disclaimer</h3>
+            <p>Mutual fund and other investments are always subject to market risks. Please read all, Scheme Information Documents (SID), Key Information Memorandum (KIM) Addendums (if any) issued thereto from time to time and any other related documents or information carefully before investing. Past performance is not indicative or assurance of future performance or returns. Please consider your specific investment requirements before choosing a fund.</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 VS Fintech Pvt Ltd. All Rights Reserved.</p>
+        
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
